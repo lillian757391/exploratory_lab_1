@@ -8,7 +8,7 @@
   },
   "sources": {
     "openmaptiles": {
-      "type": "vector", "https://tiles.openfreemap.org/styles/positron"
+      "type": "vector", "https://tiles.openfreemap.org/styles/dark"
     },
     "natural_earth_shaded_relief": {
       "maxzoom": 6,
