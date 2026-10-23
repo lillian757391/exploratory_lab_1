@@ -1,0 +1,60 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My map</title>
+  <link href="https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+
+  <style>
+    body { margin: 0; }
+    #map { position: absolute; inset: 0; }
+
+    /* Legend box */
+    #legend {
+      position: absolute;
+      left: 10px;
+      bottom: 30px;
+      width: 220px;
+      padding: 8px;
+      background: white;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      z-index: 1;
+    }
+
+    /* Legend color gradient */
+    #bar {
+      height: 14px;
+      margin-top: 8px;
+      margin-bottom: 5px;
+      background: linear-gradient(to right,
+        rgba(253,174,107,0), #fdae6b 8%, #7f2704);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <!-- Legend -->
+  <div id="legend">
+    <strong>YOUR MAP TITLE</strong>
+    <div id="bar"></div>
+    <div>Low &nbsp;&nbsp;&nbsp; High</div>
+  </div>
+
+  <script>
+    const map = new maplibregl.Map({
+      container: 'map',
+      style: 'cali_test_1.json',
+      center: [-119.982037, 37.152856],
+      zoom: 11
+    });
+
+    map.addControl(new maplibregl.NavigationControl());
+  </script>
+</body>
+</html>
+```
