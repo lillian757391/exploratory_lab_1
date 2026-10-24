@@ -35,8 +35,7 @@
       "type": "geojson",
       "data": "https://raw.githubusercontent.com/lillian757391/exploratory_lab_1/main/california (1).json"
     }
-  }
-}
+  },
   "sprite": "https://maputnik.github.io/osm-liberty/sprites/osm-liberty",
   "glyphs": "https://orangemug.github.io/font-glyphs/glyphs/{fontstack}/{range}.pbf",
   "layers": [
