@@ -9,7 +9,8 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "https://tiles.openfreemap.org/styles/dark"
+  "url": "https://tiles.openfreemap.org/planet"
+}
     },
     "natural_earth_shaded_relief": {
       "maxzoom": 6,
