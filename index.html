@@ -8,91 +8,36 @@
   <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
 
   <style>
-    body {
-      margin: 0;
+    body {margin: 0; }
+    #map {position: absolute; inset: 0;}
+    #legend {position: absolute;left: 10px;bottom: 30px;width: 220px; padding: 10px; background: white;
+      border-radius: 4px; font-family: Arial, sans-serif; font-size: 12px; color: #333;
+      box-sizing: border-box; max-height: 85vh;overflow-y: auto;
     }
-
-    #map {
-      position: absolute;
-      inset: 0;
-    }
-
-    #legend {
-      position: absolute;
-      left: 10px;
-      bottom: 30px;
-      width: 220px;
-      padding: 10px;
-      background: white;
-      border-radius: 4px;
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      color: #333;
-      box-sizing: border-box;
-      max-height: 85vh;
-      overflow-y: auto;
-    }
-
-    #legend p {
-      font-size: 15px;
-      margin: 6px 0 0;
-    }
-
-    .legend-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 6px;
-    }
-
     .score-box,
-    .income-box {
-      width: 18px;
-      height: 12px;
-      flex-shrink: 0;
-      display: inline-block;
+    .income-box {width: 18px;height: 12px; display: inline-block;
       border: 1px solid #ccc;
     }
-
-    .population-circle {
-      display: inline-block;
-      flex-shrink: 0;
-      border-radius: 50%;
-      background: #ffffff;
-      border: 1px solid #333;
-    }
-
+    .population-circle { display: inline-block;
+      border-radius: 50%; background: #ffffff; border: 1px solid #333;}
     .circle-1 { width: 8px; height: 8px; }
     .circle-2 { width: 12px; height: 12px; }
     .circle-3 { width: 16px; height: 16px; }
     .circle-4 { width: 20px; height: 20px; }
     .circle-5 { width: 24px; height: 24px; }
     .circle-6 { width: 28px; height: 28px; }
-
-    #legend hr {
-      border: 0;
-      border-top: 1px solid #ccc;
-      margin: 12px 0;
-    }
-
-    .legend-title {
-      display: block;
-      margin-bottom: 4px;
-      font-size: 19px;
-    }
+    .legend-title { display: block; margin-bottom: 4px; font-size: 19px;}
   </style>
 </head>
 
 <body>
   <div id="map"></div>
-
-  <!-- Combined Legend -->
   <div id="legend">
     <strong class="legend-title">
-      California Bike Scores and Median Income
+      California Bike Network Scores (0-100) by City and Median Income
     </strong>
 
-    <strong>Rounded Score</strong>
+    <strong>Quality of Bike Network Score (2026)</strong>
 
     <div class="legend-item">
       <span class="score-box" style="background:#d7191c"></span>
@@ -130,10 +75,7 @@
       <span class="score-box" style="background:#4caf50"></span>
       90–100
     </div>
-
-    <hr>
-
-    <strong>City Population</strong>
+    <strong>City Population (2020)</strong>
 
     <div class="legend-item">
       <span class="population-circle circle-1"></span>
@@ -162,7 +104,7 @@
 
     <hr>
 
-    <strong>Median Income ($)</strong>
+    <strong>Median Household Income by Census Tract in USD(2024) </strong>
 
     <div class="legend-item">
       <span class="income-box" style="background:rgba(218,216,216,1)"></span>
@@ -185,7 +127,7 @@
       $200,000–249,999
     </div>
     <div class="legend-item">
-      <span class="income-box" style="background:rgba(18,18,18,1)"></span>
+<span class="income-box" style="background:rgba(18,18,18,1)"></span>
       $250,000+
     </div>
     <div class="legend-item">
